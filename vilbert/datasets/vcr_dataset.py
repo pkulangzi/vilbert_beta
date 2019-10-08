@@ -324,7 +324,8 @@ class VCRDataset(Dataset):
             # anno_id = entry["anno_id"]
             anno_id = 0#entry["anno_id"]
         else:
-            anno_id = entry["img_id"]
+            #anno_id = entry["img_id"]
+            anno_id = entry["anno_id"]
 
         co_attention_idxs = entry["co_attention_mask"]
         co_attention_mask = torch.zeros((len(entry["co_attention_mask"]), self._max_region_num, self._max_caption_length))
